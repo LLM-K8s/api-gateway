@@ -1,0 +1,9 @@
+services:
+  kpilot-api-gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8000"
+    environment:
+      - GRPC_SERVER='localhost:50051'
